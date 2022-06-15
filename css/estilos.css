@@ -1,0 +1,71 @@
+body{
+    margin-top: 10%;     font: 50px Arial,Helvetica,sans-serif; font-size: 80px;
+}
+table{
+    background-color: #ADC2CC; border-radius: 10px;   padding: 8px; border:solid #25556B;
+}
+.boton1{
+    font-size: 50 px;
+    margin: center;
+    margin-left: 10px;
+    background-color:hsl(0, 0%, 100%);
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    border: 8px solid #000000;
+    border: 6px outset #ADC2CC;
+    padding: 1%;
+ 
+    
+}
+.boton2{
+    font-size: 50 px;
+    margin: center;
+    margin-left: 10px;
+    background-color:#E4D4BF ;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    border: 8px solid #F88D30;
+    border: 6px outset #ADC2CC;
+   
+    
+}
+input{
+    margin-top: 5%;
+    width: 400px;
+    height: 80px;
+    border :  30px linear-gradient(to right,#f83030,#81ec05); 
+    border-radius: 10px;
+    font-size:50px;
+   text-align: right;
+}
+
+.gradient-border{
+    background: linear-gradient(to bottom,#F88D30,#587E90,#587E90,#587E90,#587E90,#587E90,#587E90,#587E90); 
+    padding: 20px;
+    background-repeat: repeat;
+    margin-left: 5px;
+    margin-top: auto;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    animation: gradient 10s linear infinite;
+    border-style: dashed;
+
+}
+@keyframes gradient {
+    0%{
+    background-position: 0 0;
+    }
+    50%{
+        background-position: -100mm 0;
+    }
+
+    100%{
+        background-position: 0 0;
+    }
+}
+
+button{  padding: 10px; }
+

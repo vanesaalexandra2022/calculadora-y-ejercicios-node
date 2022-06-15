@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <center>
+            <form>
+                <table>
+                    
+                    <tr><td colspan="4"><main class="gradient-border"><input type="text" placeholder="0" id="pantalla"></main></td></tr>
+                    <tr><td><button type="button" class="boton1" onclick="Asignar_uno()"><b>1</b></button></td>
+                    <td><button type="button" class="boton1" onclick="Asignar_dos()"><b>2</b></button></td>
+                    <td><button type="button" class="boton1" onclick="Asignar_tres()"><b>3</b></button></td>
+                    <td><button type="button" class="boton2" onclick="Asignar_suma()"><b>+</b></button></td> </tr>
+                    <tr>
+                    <td><button type="button" class="boton1" onclick="Asignar_cuatro()"><b>4</b></button></td>
+                    <td><button type="button" class="boton1" onclick="Asignar_cinco()"><b>5</b></button></td>
+                    <td><button type="button" class="boton1" onclick="Asignar_seis()"><b>6</b></button></td>
+                    <td><button type="button" class="boton2" onclick="Asignar_resta()"><b>-</b></button></td> </tr>
+                    <tr>
+                        <td><button type="button" class="boton1" onclick="Asignar_siete()"><b>7</b></button></td>
+                        <td><button type="button" class="boton1" onclick="Asignar_ocho()"><b>8</b></button></td>
+                        <td><button type="button" class="boton1" onclick="Asignar_nueve()"><b>9</b></button></td>
+                        <td><button type="button" class="boton2" onclick="Asignar_multi()"><b>*</b></button></td></tr>
+                        <td><button type="button" class="boton2" onclick="Asignar_igual()"><b>=</b></button></td>
+                        <td><button type="button" class="boton1" onclick="Asignar_cero()"><b>0</b></button></td>
+                        <td><button type="button" class="boton2" onclick="Asignar_reset()"><b>C</b></button></td>
+                        <td><button type="button" class="boton2" onclick="Asignar_division()"><b>/</b></button></td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+
+    </body>
+
+    <script type="text/javascript">
+        var valor_digitado="";
+        var dato1="";
+        var dato2="";
+        var operacion="";
+
+        function Asignar_uno(){
+
+            valor_digitado=document.getElementById('pantalla').value;
+            document.getElementById('pantalla').value=valor_digitado+1;
+        }
+        function Asignar_dos(){
+            valor_digitado=document.getElementById('pantalla').value;
+            document.getElementById('pantalla').value=valor_digitado+2;
+        }
+        function Asignar_tres(){
+            valor_digitado=document.getElementById('pantalla').value;
+            document.getElementById('pantalla').value=valor_digitado+3;
+        }
+        function Asignar_cuatro(){
+            valor_digitado=document.getElementById('pantalla').value;
+            document.getElementById('pantalla').value=valor_digitado+4;
+        }
+        function Asignar_cinco(){
+            valor_digitado=document.getElementById('pantalla').value;
+            document.getElementById('pantalla').value=valor_digitado+5;
+        }
+        function Asignar_seis(){
+            valor_digitado=document.getElementById('pantalla').value;
+            document.getElementById('pantalla').value=valor_digitado+6;
+        }
+        function Asignar_siete(){
+            valor_digitado=document.getElementById('pantalla').value;
+            document.getElementById('pantalla').value=valor_digitado+7;
+        }
+        function Asignar_ocho(){
+            valor_digitado=document.getElementById('pantalla').value;
+            document.getElementById('pantalla').value=valor_digitado+8;
+        }
+        function Asignar_nueve(){
+            valor_digitado=document.getElementById('pantalla').value;
+            document.getElementById('pantalla').value=valor_digitado+9;
+        }
+        function Asignar_cero(){
+            valor_digitado=document.getElementById('pantalla').value;
+            document.getElementById('pantalla').value=valor_digitado+0;
+        }
+        function Asignar_suma(){
+            dato1=document.getElementById('pantalla').value;
+            valor_digitado="";
+            document.getElementById('pantalla').value='';
+            operacion="suma";
+        }
+        function Asignar_resta(){
+            dato1=document.getElementById('pantalla').value;
+            valor_digitado="";
+            document.getElementById('pantalla').value='';
+            operacion="resta";
+        }
+        function Asignar_multi(){
+            dato1=document.getElementById('pantalla').value;
+            valor_digitado="";
+            document.getElementById('pantalla').value='';
+            operacion="multiplicacion";
+        }
+        function Asignar_division(){
+            dato1=document.getElementById('pantalla').value;
+            valor_digitado="";
+            document.getElementById('pantalla').value='';
+            operacion="division";
+        }
+        function Asignar_igual()
+    {
+        dato2= document.getElementById('pantalla').value;
+        if(operacion=="suma"){
+            document.getElementById('pantalla').value=parseFloat(dato1)+parseFloat(dato2);
+        }
+
+        if(operacion=="resta"){
+            document.getElementById('pantalla').value=parseFloat(dato1)-parseFloat(dato2);
+        }
+        if(operacion=="multiplicacion"){
+            document.getElementById('pantalla').value=parseFloat(dato1)*parseFloat(dato2);
+        }
+        if(operacion=="division"){
+            document.getElementById('pantalla').value=parseFloat(dato1)/parseFloat(dato2);
+        }
+    }
+    function Asignar_reset(){
+        dato1=0;
+        dato2=0;
+        document.getElementById('pantalla').value='';
+    }
+
+    </script>
+</html>
